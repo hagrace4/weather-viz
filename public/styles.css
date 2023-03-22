@@ -8,10 +8,11 @@ body {
   fill: none;
   stroke: #000;
   shape-rendering: crispEdges;
+  stroke-width: 2px;
 }
 
 .line {
   fill: none;
   stroke: steelblue;
-  stroke-width: 1.5px;
+  stroke-width: 4px;
 }

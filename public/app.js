@@ -24,7 +24,7 @@ function createVisualization(weatherData) {
   const y = d3
     .scaleLinear()
     .range([height, 0])
-    .domain([40, d3.max(dailyData, (d) => d.temp.max)]);
+    .domain([20, d3.max(dailyData, (d) => d.temp.max)]);
     // .domain([0, d3.max(dailyData, (d) => d.temp.max)]);
 
   const line = d3
@@ -65,9 +65,18 @@ function createVisualization(weatherData) {
 
 }
 
-(async () => {
-  const lat = 34.23;
-  const lon = -118.52;
-  const weatherData = await fetchWeatherData(lat, lon);
-  createVisualization(weatherData);
-})();
+
+
+
+//Event listener to let user select City temp to display
+
+document.getElementById('city').addEventListener('change', async (e) => {
+  const cityCoordinates = e.target.value;
+  if (cityCoordinates) {
+    const [lat, lon] = cityCoordinates.split(',');
+    const weatherData = await fetchWeatherData(lat, lon);
+    d3.select('#visualization').selectAll('*').remove();
+    createVisualization(weatherData);
+  }
+});
+

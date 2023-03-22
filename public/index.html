@@ -8,6 +8,19 @@
 </head>
 <body>
     <h1>Interactive Weather Data Visualization</h1>
+    <div id="city-selector">
+      <label for="city">Choose a city:</label>
+      <select name="city" id="city">
+        <option value="">--Select a city--</option>
+        <option value="34.23,-118.52">Los Angeles</option>
+        <option value="40.71,-74.01">New York City</option>
+        <option value="37.77,-122.42">San Francisco</option>
+        <option value="41.87,-87.63">Chicago</option>
+        <option value="51.51,-0.13">London</option>
+        <option value="35.69,139.69">Tokyo</option>
+        <option value="-33.87,151.21">Sydney</option>
+      </select>
+    </div>
     <div id="visualization"></div>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="app.js"></script>
