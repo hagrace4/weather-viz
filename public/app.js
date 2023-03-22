@@ -24,7 +24,8 @@ function createVisualization(weatherData) {
   const y = d3
     .scaleLinear()
     .range([height, 0])
-    .domain([0, d3.max(dailyData, (d) => d.temp.max)]);
+    .domain([40, d3.max(dailyData, (d) => d.temp.max)]);
+    // .domain([0, d3.max(dailyData, (d) => d.temp.max)]);
 
   const line = d3
     .line()
