@@ -19,10 +19,12 @@ app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
 
-const apiKey = config.apiKey;
+// const apiKey = config.apiKey;  //for local dev
+const apiKey = process.env.API_KEY; // for prod deployment
 
 async function fetchWeatherData(lat, lon, exclude = 'minutely,alerts') {
-  const apiKey = config.apiKey;
+  // const apiKey = config.apiKey;  // For local dev
+  const apiKey = process.env.API_KEY; // for prod deployment
   const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&units=imperial&exclude=${exclude}&appid=${apiKey}`;
 
   try {
@@ -52,4 +54,3 @@ app.get('/api/weather-data/:lat/:lon', async (req, res) => {
 
 // fetchWeatherData(34.23, -118.52);
 // http://localhost:3000/api/weather-data/34.23/-118.52
-
