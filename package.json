@@ -4,5 +4,33 @@
     "d3": "^7.8.2",
     "express": "^4.18.2",
     "request": "^2.88.2"
-  }
+  },
+  "name": "weather-viz",
+  "description": "weather visualization using D3.js",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hagrace4/weather-viz.git"
+  },
+  "keywords": [
+    "weather",
+    "visualization",
+    "d3",
+    "d3.js",
+    "openweathermap",
+    "forecast",
+    "temperature",
+    "chart"
+  ],
+  "author": "Harry Grace",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hagrace4/weather-viz/issues"
+  },
+  "homepage": "https://github.com/hagrace4/weather-viz#readme"
 }
